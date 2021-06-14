@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lucian.Controller">
+   <children>
+      <AnchorPane layoutX="166.0" layoutY="-1.0" prefHeight="530.0" prefWidth="534.0" style="-fx-background-color: #0c0f12;" stylesheets="@panelsStyle.css">
+         <children>
+            <Pane fx:id="addDayPane" prefHeight="532.0" prefWidth="534.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="167.0" layoutY="129.0" prefHeight="34.0" prefWidth="159.0" text="Date">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="167.0" layoutY="225.0" prefHeight="34.0" prefWidth="159.0" text="Body Part">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="saveButton" layoutX="280.0" layoutY="426.0" onAction="#addEntry" prefHeight="34.0" prefWidth="92.0" text="Save">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXDatePicker fx:id="datePicker" layoutX="167.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" />
+                  <ChoiceBox fx:id="choiceBodyPart" layoutX="167.0" layoutY="266.0" prefHeight="25.0" prefWidth="200.0" />
+               </children></Pane>
+            <Pane fx:id="mainMenuPane" layoutY="2.0" prefHeight="530.0" prefWidth="534.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <TableView fx:id="table_info" layoutY="43.0" onMouseClicked="#selectedData" prefHeight="425.0" prefWidth="534.0">
+                    <columns>
+                        <TableColumn fx:id="col_id" prefWidth="146.0" text="ID" />
+                      <TableColumn fx:id="col_date" prefWidth="146.0" text="Date" />
+                      <TableColumn fx:id="col_bodyPart" minWidth="4.0" prefWidth="130.0" text="BodyPart" />
+                    </columns>
+                  </TableView>
+                  <JFXTextField fx:id="updateDate_txt" layoutX="138.0" layoutY="483.0" prefHeight="25.0" prefWidth="151.0" />
+                  <JFXTextField fx:id="updateBodyPart_txt" layoutX="369.0" layoutY="483.0" prefHeight="25.0" prefWidth="151.0" />
+                  <Label layoutX="100.0" layoutY="479.0" prefHeight="34.0" prefWidth="38.0" text="Date:">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="296.0" layoutY="479.0" prefHeight="34.0" prefWidth="73.0" text="Body Part:">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="6.0" layoutY="479.0" prefHeight="34.0" prefWidth="24.0" text="ID:">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="updateID_txt" layoutX="30.0" layoutY="483.0" prefHeight="25.0" prefWidth="54.0" />
+               </children></Pane>
+         </children></AnchorPane>
+      <AnchorPane layoutX="-2.0" layoutY="43.0" prefHeight="487.0" prefWidth="169.0" style="-fx-background-color: #2b2d2f;" stylesheets="@buttons.css">
+         <children>
+            <Button fx:id="mainMenu_btn" layoutX="1.0" layoutY="134.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="169.0" text="Main Menu" textFill="#8a8888">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="addDay_btn" layoutX="1.0" layoutY="198.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="169.0" text="Add Day Menu" textFill="#8a8888" AnchorPane.topAnchor="198.0">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteDay_btn" layoutX="1.0" layoutY="262.0" mnemonicParsing="false" onAction="#deleteData" prefHeight="34.0" prefWidth="169.0" styleClass="deleteBtn" text="Delete Day" textFill="#8a8888" AnchorPane.topAnchor="262.0">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="updateData_Btn" layoutY="324.0" mnemonicParsing="false" onAction="#editData" prefHeight="34.0" prefWidth="169.0" styleClass="updateBtn" text="Update Data" textFill="#8a8888" AnchorPane.topAnchor="324.0">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </Button>
+            <JFXTextField fx:id="txt_id" layoutX="52.0" layoutY="49.0" prefHeight="25.0" prefWidth="63.0" style="visibility: hidden;" />
+            <Button fx:id="ResetID_btn" layoutX="1.0" layoutY="389.0" mnemonicParsing="false" onAction="#resetTableID" prefHeight="34.0" prefWidth="169.0" text="Reset ID" textFill="#8a8888">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </Button>
+            <JFXTextField fx:id="searchBar" layoutX="34.0" layoutY="49.0" promptText="Search" style="-fx-background-color: #d3d3d3;" />
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="9.0" layoutY="68.0" size="1.6em" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane prefHeight="44.0" prefWidth="700.0" style="-fx-background-color: #2b2d2f;" stylesheets="@style.css">
+         <children>
+            <FontAwesomeIconView fill="#a80101" glyphName="CLOSE" layoutX="669.0" layoutY="29.0" onMouseClicked="#close" size="1.8em" wrappingWidth="17.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.485713958740234" />
+            <FontAwesomeIconView fill="WHITE" glyphName="MINUS" layoutX="633.0" layoutY="29.0" onMouseClicked="#minimize" size="1.8em" wrappingWidth="17.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+   </children>
+</AnchorPane>

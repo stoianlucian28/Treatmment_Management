@@ -1,0 +1,32 @@
+Button:hover{
+
+    -fx-cursor:hand;
+    -fx-background-color: #D3D3D3;
+}
+
+Button{
+
+    -fx-background-color: #ffffff;
+}
+
+.deleteBtn{
+
+    -fx-background-color: #a80101;
+    -fx-text-fill: #ffffff;
+}
+
+.deleteBtn:hover{
+
+    -fx-background-color: #800000;
+}
+
+.updateBtn{
+
+    -fx-background-color: #00BFFF;
+    -fx-text-fill: #ffffff;
+}
+
+.updateBtn:hover{
+
+    -fx-background-color: #87CEFA;
+}

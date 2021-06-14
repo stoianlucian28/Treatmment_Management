@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MethotrexateTreatment.jnlp">
+  <information>
+    <title>MethotrexateTreatment</title>
+    <vendor>Unknown</vendor>
+    <description>MethotrexateTreatment</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MethotrexateTreatment.jar" size="12446" download="eager" />
+    <jar href="fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="jfoenix-8.0.10.jar" size="2710207" download="eager" />
+    <jar href="mysql-connector-java-8.0.22.jar" size="2389216" download="eager" />
+    <jar href="ojdbc8.jar" size="4398623" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="700" height="530" main-class="lucian.Main"  name="MethotrexateTreatment" />
+  <update check="background"/>
+</jnlp>

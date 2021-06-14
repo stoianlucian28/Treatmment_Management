@@ -1,0 +1,20 @@
+JFXTextField{
+
+    -fx-background-color: #DCDCDC;
+}
+
+JFXButton{
+
+    -fx-background-color: #DCDCDC;
+}
+
+JFXButton:hover{
+
+    -fx-cursor: hand;
+    -fx-background-color: #8bbdd9;
+}
+
+.deleteDay_btn:hover{
+
+    -fx-background-color: #8B0000;
+}
